@@ -1,0 +1,149 @@
+<template>
+	<view class="container">
+		<view class="updateWrap">
+			<image class="topIcon" mode="widthFix" src="@/static/app-plus/lib_update_app_top_bg.png"></image>
+			<view class="updateContent">
+				<text class="updateTitleText">检测到有新的版本v.{{ apkInfo.newVersion }} 是否更新？</text>
+				<text class="updateDescText">{{ apkInfo.updateLog }}</text>
+
+				<template v-if="downloading">
+					<view class="progressWrap">
+						<view class="progress"><view class="progressSlide" :style="{width:  500 * (progress / 100) + 'rpx'}"></view></view>
+						<text class="percent">{{progress}}%</text>
+					</view>
+					<text></text>
+					<text class="downLoadText">资源下载中，请稍后...</text>
+				</template>
+				<text v-else @click="handleUpdate" class="updateBtnText">立即升级</text>
+			</view>
+			<view v-if="!apkInfo.isConstraint" class="line"></view>
+			<image v-if="!apkInfo.isConstraint" @click="handleClose" class="closeIcon" mode="widthFix" src="@/static/app-plus/lib_update_app_close.png"></image>
+		</view>
+	</view>
+</template>
+<script setup>
+import { ref } from 'vue';
+import useGlobalStore from '@/stores/global';
+import { storeToRefs } from 'pinia';
+const globalStore = useGlobalStore();
+const { apkInfo } = storeToRefs(globalStore);
+const downloading = ref(false);
+const progress = ref(0);
+let downloadTask;
+const handleClose = () => {
+	uni.getCurrentSubNVue().hide();
+	downloadTask?.abort();
+};
+const handleUpdate = () => {
+	downloading.value = true;
+	downloadTask = uni.downloadFile({
+		url: apkInfo.value.apkFileUrl, //下载地址
+		success: res => {
+			//下载成功
+			plus.runtime.install(res.tempFilePath, { force: true }, () => plus.runtime.restart());
+		},
+		fail: err => {
+			uni.showModal({
+				title: '温馨提示',
+				content: "下载失败！请重试",
+				showCancel: false,
+				success: res => {
+					if(res.confirm) {
+						downloading.value = false;
+					}
+				}
+			})
+		}
+	});
+	downloadTask.onProgressUpdate(res => (progress.value = res.progress));
+};
+</script>
+
+<style scoped lang="less">
+.container {
+	position: relative;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+.updateWrap {
+	align-items: center;
+	.topIcon {
+		width: 640rpx;
+	}
+	.updateContent {
+		// width: 100%;
+		width: 640rpx;
+		background-color: #fff;
+		padding: 30rpx 30rpx;
+
+		.updateTitleText {
+			font-size: 32rpx;
+			color: #333333;
+		}
+		.updateDescText {
+			font-size: 28rpx;
+			color: #666666;
+			margin-top: 10rpx;
+		}
+		.downloadProgress {
+			margin-top: 20rpx;
+		}
+		.downLoadText {
+			font-size: 28rpx;
+			color: #666666;
+			margin-top: 10rpx;
+			text-align: center;
+		}
+		.updateBtnText {
+			width: 580rpx;
+			height: 80rpx;
+			text-align: center;
+			background-color: #e84339;
+			color: #ffffff;
+			line-height: 80rpx;
+			border-radius: 20rpx;
+			font-size: 34rpx;
+			margin-top: 20rpx;
+		}
+	}
+	.line {
+		border-left: 1px solid #fff;
+		width: 0;
+		height: 100rpx;
+	}
+	.closeIcon {
+		width: 60rpx;
+	}
+}
+.progressWrap{
+	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 580rpx;
+	
+	.progress{
+		width: 500rpx;
+		height: 10rpx;
+		border-radius: 5rpx;
+		background-color: #EBEBEB;
+		position: relative;
+		.progressSlide{
+			// width: 60%;
+			height: 10rpx;
+			border-radius: 5rpx;
+			background-color: #e84339;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	.percent{
+		width: 80rpx;
+		font-size: 28rpx;
+		color: #666666;
+		text-align: right;
+	}
+}
+</style>

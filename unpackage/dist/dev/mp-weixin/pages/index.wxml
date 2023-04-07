@@ -1,0 +1,1 @@
+<view class="container data-v-2a183b29"> 12344444441111 <avatar-cropper wx:if="{{b}}" class="data-v-2a183b29" bindupload="{{a}}" u-i="2a183b29-0" bind:__l="__l" u-p="{{b}}"></avatar-cropper><yuansheng-loadmore wx:if="{{c}}" class="data-v-2a183b29" u-i="2a183b29-1" bind:__l="__l" u-p="{{c}}"></yuansheng-loadmore></view>

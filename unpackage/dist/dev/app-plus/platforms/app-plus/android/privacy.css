@@ -1,0 +1,36 @@
+
+body {
+  background: transparent;
+}
+
+.container[data-v-5648bd08] {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.contentWrap[data-v-5648bd08] {
+  width: 70vw;
+  background-color: #ffffff;
+  border-radius: 0.625rem;
+  box-sizing: border-box;
+  padding: 0.625rem;
+}
+.contentWrap .content[data-v-5648bd08] {
+  margin: 0.625rem 0;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+.contentWrap .title[data-v-5648bd08] {
+  text-align: center;
+  font-weight: 800;
+}
+.contentWrap .closeBtn[data-v-5648bd08] {
+  color: #2249FC;
+  text-align: right;
+}

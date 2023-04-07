@@ -1,0 +1,341 @@
+{
+  "@platforms": [
+    "android",
+    "iPhone",
+    "iPad"
+  ],
+  "id": "__UNI__5BB07FD",
+  "name": "uni_demo_vue3",
+  "version": {
+    "name": "1.0.0",
+    "code": 100
+  },
+  "description": "",
+  "developer": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "permissions": {
+    "UniNView": {
+      "description": "UniNView原生渲染"
+    }
+  },
+  "plus": {
+    "useragent": {
+      "value": "uni-app",
+      "concatenate": true
+    },
+    "splashscreen": {
+      "target": "id:1",
+      "autoclose": true,
+      "waiting": true,
+      "delay": 0
+    },
+    "popGesture": "close",
+    "launchwebview": {
+      "id": "1",
+      "kernel": "WKWebview"
+    },
+    "statusbar": {
+      "immersed": "supportedDevice",
+      "style": "light",
+      "background": "#FFFFFF"
+    },
+    "usingComponents": true,
+    "nvueCompiler": "uni-app",
+    "nvueStyleCompiler": "uni-app",
+    "safearea": {
+      "bottom": {
+        "offset": "none"
+      }
+    },
+    "distribute": {
+      "splashscreen": {
+        "useOriginalMsgbox": true
+      },
+      "google": {
+        "permissions": [
+          "<uses-feature android:name=\"android.hardware.camera\"/>",
+          "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+          "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+          "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+          "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+          "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+          "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>"
+        ],
+        "abiFilters": [
+          "armeabi-v7a"
+        ]
+      },
+      "apple": {
+        "capabilities": {
+          "entitlements": {
+            "com.apple.developer.associated-domains": []
+          },
+          "plists": {}
+        },
+        "devices": "iphone",
+        "urlschemewhitelist": [
+          "baidumap",
+          "iosamap",
+          "qqmap"
+        ],
+        "privacyDescription": {
+          "NSPhotoLibraryUsageDescription": "读取相册图片以用于用户分享以及注册时选择用户的头像",
+          "NSPhotoLibraryAddUsageDescription": "保存详情图片到相册以用于分享",
+          "NSLocationWhenInUseUsageDescription": "获取当前位置用于创建教练常驻地点"
+        },
+        "idfa": false,
+        "dSYMs": false
+      },
+      "plugins": {
+        "payment": {
+          "alipay": {
+            "__platform__": [
+              "ios",
+              "android"
+            ]
+          },
+          "weixin": {
+            "__platform__": [
+              "ios",
+              "android"
+            ],
+            "appid": "wx393518b4616af58d",
+            "UniversalLinks": "https://demo.dcloud.net.cn/ulink/"
+          }
+        },
+        "push": {},
+        "ad": {},
+        "geolocation": {
+          "amap": {
+            "__platform__": [
+              "ios",
+              "android"
+            ],
+            "appkey_ios": "e51a00a59d55094a4cbfd9f19a80a2c6",
+            "appkey_android": "c6f651a180041725179b653de9161464"
+          }
+        },
+        "oauth": {
+          "weixin": {
+            "appid": "wx393518b4616af58d",
+            "appsecret": "",
+            "UniversalLinks": "https://demo.dcloud.net.cn/ulink/"
+          }
+        },
+        "maps": {
+          "amap": {
+            "appkey_ios": "e51a00a59d55094a4cbfd9f19a80a2c6",
+            "appkey_android": "c6f651a180041725179b653de9161464"
+          }
+        },
+        "audio": {
+          "mp3": {
+            "description": "Android平台录音支持MP3格式文件"
+          }
+        }
+      }
+    },
+    "uniStatistics": {
+      "enable": false
+    },
+    "nativePlugins": {
+      "JG-JCore": {
+        "JPUSH_APPKEY_IOS": "b0bc1c858e8e28eb581d6527",
+        "JPUSH_CHANNEL_IOS": "",
+        "JPUSH_APPKEY_ANDROID": "b0bc1c858e8e28eb581d6527",
+        "JPUSH_CHANNEL_ANDROID": "",
+        "__plugin_info__": {
+          "name": "JG-JCore",
+          "description": "极光推送JCore插件",
+          "platforms": "Android,iOS",
+          "url": "",
+          "android_package_name": "",
+          "ios_bundle_id": "",
+          "isCloud": false,
+          "bought": -1,
+          "pid": "",
+          "parameters": {
+            "JPUSH_APPKEY_IOS": {
+              "des": "[iOS]极光portal配置应用信息时分配的AppKey",
+              "key": "JCore:APP_KEY",
+              "value": ""
+            },
+            "JPUSH_CHANNEL_IOS": {
+              "des": "[iOS]用于统计分发渠道，不需要可填默认值developer-default",
+              "key": "JCore:CHANNEL",
+              "value": ""
+            },
+            "JPUSH_APPKEY_ANDROID": {
+              "des": "[Android]极光portal配置应用信息时分配的AppKey",
+              "key": "JPUSH_APPKEY",
+              "value": ""
+            },
+            "JPUSH_CHANNEL_ANDROID": {
+              "des": "[Android]用于统计分发渠道，不需要可填默认值developer-default",
+              "key": "JPUSH_CHANNEL",
+              "value": ""
+            }
+          }
+        }
+      },
+      "JG-JPush": {
+        "JPUSH_ISPRODUCTION_IOS": "",
+        "JPUSH_ADVERTISINGID_IOS": "",
+        "JPUSH_DEFAULTINITJPUSH_IOS": "",
+        "JPUSH_OPPO_APPKEY": "",
+        "JPUSH_OPPO_APPID": "",
+        "JPUSH_OPPO_APPSECRET": "",
+        "JPUSH_VIVO_APPKEY": "",
+        "JPUSH_VIVO_APPID": "",
+        "JPUSH_MEIZU_APPKEY": "",
+        "JPUSH_MEIZU_APPID": "",
+        "JPUSH_XIAOMI_APPKEY": "",
+        "JPUSH_XIAOMI_APPID": "",
+        "JPUSH_HUAWEI_APPID": "",
+        "JPUSH_HONOR_APPID": "",
+        "__plugin_info__": {
+          "name": "JG-JPush",
+          "description": "极光推送Hbuilder插件",
+          "platforms": "Android,iOS",
+          "url": "",
+          "android_package_name": "",
+          "ios_bundle_id": "",
+          "isCloud": false,
+          "bought": -1,
+          "pid": "",
+          "parameters": {
+            "JPUSH_ISPRODUCTION_IOS": {
+              "des": "[iOS]是否是生产环境，是填true，不是填false或者不填",
+              "key": "JPush:ISPRODUCTION",
+              "value": ""
+            },
+            "JPUSH_ADVERTISINGID_IOS": {
+              "des": "[iOS]广告标识符（IDFA）如果不需要使用IDFA，可不填",
+              "key": "JPush:ADVERTISINGID",
+              "value": ""
+            },
+            "JPUSH_DEFAULTINITJPUSH_IOS": {
+              "des": "[iOS]是否默认初始化，是填true，不是填false或者不填",
+              "key": "JPush:DEFAULTINITJPUSH",
+              "value": ""
+            },
+            "JPUSH_OPPO_APPKEY": {
+              "des": "厂商OPPO-appkey,示例：OP-12345678",
+              "key": "OPPO_APPKEY",
+              "value": ""
+            },
+            "JPUSH_OPPO_APPID": {
+              "des": "厂商OPPO-appId,示例：OP-12345678",
+              "key": "OPPO_APPID",
+              "value": ""
+            },
+            "JPUSH_OPPO_APPSECRET": {
+              "des": "厂商OPPO-appSecret,示例：OP-12345678",
+              "key": "OPPO_APPSECRET",
+              "value": ""
+            },
+            "JPUSH_VIVO_APPKEY": {
+              "des": "厂商VIVO-appkey,示例：12345678",
+              "key": "com.vivo.push.api_key",
+              "value": ""
+            },
+            "JPUSH_VIVO_APPID": {
+              "des": "厂商VIVO-appId,示例：12345678",
+              "key": "com.vivo.push.app_id",
+              "value": ""
+            },
+            "JPUSH_MEIZU_APPKEY": {
+              "des": "厂商MEIZU-appKey,示例：MZ-12345678",
+              "key": "MEIZU_APPKEY",
+              "value": ""
+            },
+            "JPUSH_MEIZU_APPID": {
+              "des": "厂商MEIZU-appId,示例：MZ-12345678",
+              "key": "MEIZU_APPID",
+              "value": ""
+            },
+            "JPUSH_XIAOMI_APPKEY": {
+              "des": "厂商XIAOMI-appKey,示例：MI-12345678",
+              "key": "XIAOMI_APPKEY",
+              "value": ""
+            },
+            "JPUSH_XIAOMI_APPID": {
+              "des": "厂商XIAOMI-appId,示例：MI-12345678",
+              "key": "XIAOMI_APPID",
+              "value": ""
+            },
+            "JPUSH_HUAWEI_APPID": {
+              "des": "厂商HUAWEI-appId,示例：appid=12346578",
+              "key": "com.huawei.hms.client.appid",
+              "value": ""
+            },
+            "JPUSH_HONOR_APPID": {
+              "des": "厂商HONOR-appId,示例：12346578",
+              "key": "com.hihonor.push.app_id",
+              "value": ""
+            }
+          }
+        }
+      }
+    },
+    "allowsInlineMediaPlayback": true,
+    "uni-app": {
+      "control": "uni-v3",
+      "vueVersion": "3",
+      "compilerVersion": "3.6.4",
+      "nvueCompiler": "uni-app",
+      "renderer": "auto",
+      "nvue": {
+        "flex-direction": "column"
+      },
+      "nvueLaunchMode": "normal"
+    },
+    "tabBar": {
+      "position": "bottom",
+      "color": "#7A7E83",
+      "selectedColor": "#FF5950",
+      "borderStyle": "rgba(255,255,255,0.4)",
+      "blurEffect": "none",
+      "fontSize": "10px",
+      "iconWidth": "24px",
+      "spacing": "3px",
+      "height": "50px",
+      "backgroundColor": "#ffffff",
+      "list": [
+        {
+          "text": "首页",
+          "pagePath": "pages/index",
+          "iconPath": "/static/tabbar/icon_home@2x.png",
+          "selectedIconPath": "/static/tabbar/icon_home_click@2x.png"
+        },
+        {
+          "text": "驾考",
+          "pagePath": "pages/drive",
+          "iconPath": "/static/tabbar/icon_jk@2x.png",
+          "selectedIconPath": "/static/tabbar/icon_jk_click@2x.png"
+        },
+        {
+          "text": "我的",
+          "pagePath": "pages/mine",
+          "iconPath": "/static/tabbar/icon_mine@2x.png",
+          "selectedIconPath": "/static/tabbar/icon_mine_click@2x.png"
+        }
+      ],
+      "selectedIndex": 0,
+      "shown": true,
+      "child": [
+        "lauchwebview"
+      ],
+      "selected": 0
+    }
+  },
+  "screenOrientation": [
+    "portrait-primary",
+    "portrait-secondary"
+  ],
+  "launch_path": "__uniappview.html"
+}

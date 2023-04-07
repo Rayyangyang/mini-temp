@@ -1,0 +1,19 @@
+{
+  "name": "uni-app",
+  "version": "1.0.0",
+  "description": "demo",
+  "main": "index.js",
+  "author": "demo",
+  "license": "demo",
+  "dependencies": {
+    "clipboard": "^2.0.11",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.6",
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "sass": "^1.61.0",
+    "sass-loader": "^13.2.2"
+  }
+}

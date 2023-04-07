@@ -1,0 +1,165 @@
+{
+    "name" : "uni_demo_vue3",
+    "appid" : "__UNI__9E1541F",
+    "description" : "",
+    "versionName" : "1.0.0",
+    "versionCode" : 100,
+    "transformPx" : false,
+    "app-plus" : {
+        /* 5+App特有相关 */
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "nvueStyleCompiler" : "uni-app",
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        "modules" : {},
+        /* 安全区域配置仅iOS平台生效   */
+        "safearea" : {
+            "bottom" : {
+                "offset" : "none"
+            }
+        },
+        /* 模块配置 */
+        "distribute" : {
+            /* 应用发布信息 */
+            "android" : {
+                /* android打包配置 */
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>"
+                ],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a" ]
+            },
+            "ios" : {
+                "capabilities" : {
+                    "entitlements" : {
+                        // 合并到工程entitlements文件的数据（json格式）  
+                        "com.apple.developer.associated-domains" : []
+                    },
+                    "plists" : {}
+                },
+                "devices" : "iphone",
+                "urlschemewhitelist" : [ "baidumap", "iosamap", "qqmap" ],
+                "privacyDescription" : {
+                    "NSPhotoLibraryUsageDescription" : "",
+                    "NSPhotoLibraryAddUsageDescription" : "",
+                    "NSLocationWhenInUseUsageDescription" : ""
+                },
+                "idfa" : false,
+                "dSYMs" : false
+            },
+            // 合并到工程Info.plist文件的数据（json格式）  
+            /* ios打包配置 */
+            "sdkConfigs" : {
+                "payment" : {
+                    "alipay" : {
+                        "__platform__" : [ "ios", "android" ]
+                    },
+                    "weixin" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appid" : "wx393518b4616af58d",
+                        "UniversalLinks" : "https://demo.dcloud.net.cn/ulink/"
+                    }
+                },
+                "push" : {},
+                "ad" : {},
+                "geolocation" : {
+                    "amap" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appkey_ios" : "e51a00a59d55094a4cbfd9f19a80a2c6",
+                        "appkey_android" : "c6f651a180041725179b653de9161464"
+                    }
+                },
+                "oauth" : {
+                    "weixin" : {
+                        "appid" : "wx393518b4616af58d",
+                        "appsecret" : "",
+                        "UniversalLinks" : "https://demo.dcloud.net.cn/ulink/"
+                    }
+                },
+                "maps" : {
+                    "amap" : {
+                        "appkey_ios" : "e51a00a59d55094a4cbfd9f19a80a2c6",
+                        "appkey_android" : "c6f651a180041725179b653de9161464"
+                    }
+                }
+            },
+            "splashscreen" : {
+                "useOriginalMsgbox" : true
+            }
+        },
+        "uniStatistics" : {
+            "enable" : false
+        },
+        "nativePlugins" : {}
+    },
+    /* SDK配置 */
+    "quickapp" : {},
+    /* 快应用特有相关 */
+    "mp-weixin" : {
+        /* 小程序特有相关 */
+        "appid" : "wxacdeac8ceb624a34",
+			"renderer": "skyline",
+        "setting" : {
+            "urlCheck" : false,
+            "es6" : true,
+            "postcss" : true,
+            "minified" : true,
+            "minifyWXML" : true
+        },
+        "usingComponents" : true,
+        "lazyCodeLoading" : "requiredComponents",
+        "permission" : {},
+        "uniStatistics" : {
+            "enable" : false
+        },
+        "optimization" : {
+            "subPackages" : true
+        }
+    },
+    "uniStatistics" : {
+        "enable" : false
+    },
+    "h5" : {
+        "uniStatistics" : {
+            "enable" : false
+        },
+        "devServer" : {
+            "https" : false
+        }
+    },
+    "mp-alipay" : {
+        "uniStatistics" : {
+            "enable" : false
+        }
+    },
+    "mp-baidu" : {
+        "uniStatistics" : {
+            "enable" : false
+        }
+    },
+    "mp-qq" : {
+        "uniStatistics" : {
+            "enable" : false
+        }
+    },
+    "mp-toutiao" : {
+        "uniStatistics" : {
+            "enable" : false
+        }
+    },
+    "vueVersion" : "3"
+}
+/* 模块配置 *//* 应用发布信息 *//* android打包配置 */
+
